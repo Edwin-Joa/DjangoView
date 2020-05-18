@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django import http
 from django.views import View
 # Create your views here.
@@ -22,8 +22,29 @@ class LoginView(View):
     def post(self,request):
         return http.HttpResponse('POST得到的登录界面')
 
+class ResponseT(View):
+    def get(self,request):
+        return http.HttpResponse(content='测试响应代码',content_type='text/html',status='200')
 
 
+
+class JsonDResponse(View):
+    def get(self,request):
+        json_dict = {
+            "name":"mike",
+            "age":19,
+        }
+        return http.JsonResponse(json_dict)
+
+class IndexView(View):
+    def get(self,request):
+        return http.HttpResponse('首页')
+
+
+class RedirectRes(View):
+    def post(self,request):
+        # return redirect('https://www.bilibili.com/')
+        return redirect('/index/')
 # def register(request):
 # 	return http.HttpResponse('这是一个注册页面')
 
