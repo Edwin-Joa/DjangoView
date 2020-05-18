@@ -38,6 +38,7 @@ from django.urls import path,include
 urlpatterns = [
 	path('',include('users.urls')),
 ]
+    ```
 ```
 
     * 如此基本路由配置完毕
@@ -58,14 +59,14 @@ urlpatterns = [
         	    return http.HttpReponse('GET请求返回的页面')
         	elif request.method == 'POST':
                 return http.HttpResponse('POST请求返回的页面')
-        ```
+```
 
         说明：该方法可以实现根据不同的请求方法返回不同的页面，但代码量大，且代码复用性较小；所以通常使用类视图
-
+    
     * 定义类视图：
-
+    
       * 进入子应用中的view视图文件，定义类视图：
-
+    
         ```python
         class RegisterView(View):
             def get(self,request):
@@ -74,30 +75,31 @@ urlpatterns = [
                 return http.HttpResponse('post请求返回的界面')
         ```
 
-        
+
+​        
 
       * 配置路由：进入子应用的urls.py文件，配置路由：
-
+    
         ```python
         urlpatterns = [
             path('users/regitser/',views.RegisterView.as_view()),
         ]
         ```
-
+    
       * 配置好路由之后即可通过get、post两种请求方式请求register页面，但若使用post请求页面，默认会报错，原因是django默认设置了csrf保护机制，在除了get请求之外的其他所有请求，django都会进行验证，所以在测试阶段可先关闭此功能:
-
+    
         ```Python
         # 进入django项目的setting文件中，找到中间件列表中间的csrf中间件，将对应代码注释掉即可
         ```
-
+    
     * 了解类视图的响应机制，as_view()：
-
+    
       1. 首先将类视图转化为函数视图
       2. 接受类视图的参数并传递给函数视图
       3. 分发派遣不同的相应
-
+    
     * 类视图的拓展类
-
+    
       ```Python
       class RegisterMixin(object):
           def pp(self):

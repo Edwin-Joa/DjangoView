@@ -33,4 +33,7 @@ class PhoneParamView(View):
     def get(self,request,phone_num):
         return http.HttpResponse(f'取得的url数据为：Tel: {phone_num}。')
 
-
+class RequestHeaderParamView(View):
+    def get(self,request):
+        ret = request.META.get('CONTENT_TYPE')
+        return http.HttpResponse(f'{ret}')
