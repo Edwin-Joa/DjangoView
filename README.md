@@ -306,26 +306,129 @@ urlpatterns = [
 
   **语法：JsonResponse(json字典数据)**
 
+  > ```
+  > class JsonResponse(HttpResponse):
+  >     """
+  >     An HTTP response class that consumes data to be serialized to JSON.
+  > 
+  >     :param data: Data to be dumped into json. By default only ``dict`` objects
+  >       are allowed to be passed due to a security flaw before EcmaScript 5. See
+  >       the ``safe`` parameter for more information.
+  >     :param encoder: Should be a json encoder class. Defaults to
+  >       ``django.core.serializers.json.DjangoJSONEncoder``.
+  >     :param safe: Controls if only ``dict`` objects may be serialized. Defaults
+  >       to ``True``.
+  >     :param json_dumps_params: A dictionary of kwargs passed to json.dumps().
+  >     """
+  > ```
+
   * 返回字典型json数据
 
     ```python
-    import json
-    
+    # JsonResponse()默认只传输字典数据
     class JsonResponse(View):
         def get(self,request):
-            
+            json_dict = {
+            "name":'mike',
+                "age":20,
+            }
+            return http.JsonResponse(json_dict)
     ```
 
     
 
   * 返回非字典型json数据
 
+    ```python
+    # JsonResponse()也可以传输列表数据
+    return http.JsonResponse(list,safe=False)
+    ```
+
+    
+
 * redirect
 
   **语法：redirect('路径')**
 
   * 普通redirect用法
+
+    ```python
+    # 1.重定向至绝对路径
+    return redirect('https://www.bilibili.com/')
+    # 2.重定向至相对路径：相对路径前要加根目录'/'，否则重定向默认将当前路径与重定向路径拼接
+    return redirect('/index/')
+    ```
+
+    
+
   * redirect配合reverse使用
+
+    **redirect配合reverse可以在路由更改的情况下，与之相关的重定向路由不需要手动修改，reverse()可以通过别名反向解析，得到路由**
+
+    **语法：reverse('主路由别名:子路由别名')**
+
+    > ```python
+    > def include(arg, namespace=None):
+    >     app_name = None
+    >     if isinstance(arg, tuple):
+    >         # Callable returning a namespace hint.
+    >         try:
+    >             urlconf_module, app_name = arg
+    >         except ValueError:
+    >             if namespace:
+    >                 raise ImproperlyConfigured(
+    >                     'Cannot override the namespace for a dynamic module that '
+    >                     'provides a namespace.'
+    >                 )
+    >             raise ImproperlyConfigured(
+    >                 'Passing a %d-tuple to include() is not supported. Pass a '
+    >                 '2-tuple containing the list of patterns and app_name, and '
+    >                 'provide the namespace argument to include() instead.' % len(arg)
+    >             )
+    >     else:
+    >         # No namespace hint - use manually provided namespace.
+    >         urlconf_module = arg
+    > 
+    >     if isinstance(urlconf_module, str):
+    >         urlconf_module = import_module(urlconf_module)
+    >     patterns = getattr(urlconf_module, 'urlpatterns', urlconf_module)
+    >     app_name = getattr(urlconf_module, 'app_name', app_name)
+    >     if namespace and not app_name:
+    >         raise ImproperlyConfigured(
+    >             'Specifying a namespace in include() without providing an app_name '
+    >             'is not supported. Set the app_name attribute in the included '
+    >             'module, or pass a 2-tuple containing the list of patterns and '
+    >             'app_name instead.',
+    >         )
+    >     namespace = namespace or app_name
+    >     # Make sure the patterns can be iterated through (without this, some
+    >     # testcases will break).
+    >     if isinstance(patterns, (list, tuple)):
+    >         for url_pattern in patterns:
+    >             pattern = getattr(url_pattern, 'pattern', None)
+    >             if isinstance(pattern, LocalePrefixPattern):
+    >                 raise ImproperlyConfigured(
+    >                     'Using i18n_patterns in an included URLconf is not allowed.'
+    >                 )
+    >     return (urlconf_module, app_name, namespace)
+    > ```
+
+    ```python
+    # 1.在总路由中为子路由起别名
+    urlpatterns = [
+        path('',include(('request_response.urls','request_response'),namespace='request_response')),
+    ]
+    # 2.在子路由中为子路由起别名
+    urlpatterns = [
+        path('redi_reve/',views.RediReveView.as_view(),name='redi_reve'),
+    ]
+    # 3.redirect配合reverse使用
+    	return redirect(reverse('request_response:redi_reve'))
+    ```
+
+    
+
+    
 
 * render
 

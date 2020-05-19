@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,reverse
 from django import http
 from django.views import View
 # Create your views here.
@@ -36,6 +36,7 @@ class JsonDResponse(View):
         }
         return http.JsonResponse(json_dict)
 
+
 class IndexView(View):
     def get(self,request):
         return http.HttpResponse('首页')
@@ -44,7 +45,10 @@ class IndexView(View):
 class RedirectRes(View):
     def post(self,request):
         # return redirect('https://www.bilibili.com/')
-        return redirect('/index/')
+        ret_url = reverse('users:index')
+        return redirect(ret_url)
+
+
 # def register(request):
 # 	return http.HttpResponse('这是一个注册页面')
 
