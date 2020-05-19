@@ -39,6 +39,7 @@ class JsonDResponse(View):
 
 class IndexView(View):
     def get(self,request):
+        print('view视图内容')
         return http.HttpResponse('首页')
 
 
