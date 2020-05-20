@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3531cf-5aa7-4f27-9c4f-e76bf3f2616f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/booktest/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booktest/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booktest/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booktest/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booktest/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booktest/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booktest/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7.Models.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dd767178-f719-42e7-a07f-21cda2d4fd00.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booktest/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoView/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoView/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoView/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoView/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booktest/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/booktest/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booktest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/booktest/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booktest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/booktest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,34 +21,47 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="django_demo@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/booktest/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/booktest/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
               <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/Django/lib/python3.6/site-packages/django/db/models/fields/related.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-49">
-              <caret line="766" lean-forward="true" selection-start-line="766" selection-end-line="766" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjangoView/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,6 +75,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bup</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -69,13 +90,18 @@
         <option value="$PROJECT_DIR$/converters.py" />
         <option value="$PROJECT_DIR$/request_response/views.py" />
         <option value="$PROJECT_DIR$/request_response/urls.py" />
-        <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/DjangoView/urls.py" />
         <option value="$PROJECT_DIR$/DjangoView/middleware.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/middleware.py" />
+        <option value="$PROJECT_DIR$/booktest/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/DjangoView/settings.py" />
+        <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/booktest/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dd767178-f719-42e7-a07f-21cda2d4fd00/console.sql" />
+        <option value="$PROJECT_DIR$/users/urls.py" />
+        <option value="$PROJECT_DIR$/DjangoView/urls.py" />
+        <option value="$PROJECT_DIR$/booktest/urls.py" />
+        <option value="$PROJECT_DIR$/booktest/views.py" />
       </list>
     </option>
   </component>
@@ -103,6 +129,11 @@
               <item name="~/Desktop/DjangoView/DjangoView" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="booktest" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="DjangoView" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/DjangoView/DjangoView" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="DjangoView" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -111,8 +142,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -128,6 +161,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/DjangoView" />
     </key>
   </component>
@@ -215,7 +249,9 @@
       <workItem from="1589765912789" duration="6414000" />
       <workItem from="1589800585210" duration="6524000" />
       <workItem from="1589845058111" duration="8819000" />
-      <workItem from="1589872493803" duration="10925000" />
+      <workItem from="1589872493803" duration="12038000" />
+      <workItem from="1589933870931" duration="1867000" />
+      <workItem from="1589936931958" duration="5114000" />
     </task>
     <task id="LOCAL-00001" summary="响应HttpResponse、JsonResponse、redirect">
       <created>1589806248552</created>
@@ -224,19 +260,27 @@
       <option name="project" value="LOCAL" />
       <updated>1589806248552</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="定义模型类models，并创建数据表">
+      <created>1589899823309</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589899823311</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40320000" />
+    <option name="totallyTimeSpent" value="48414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19635417" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1046875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32924107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -248,13 +292,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32901832" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.5943905" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32901832" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.328125" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32992464" />
+      <window_info anchor="right" id="Database" order="4" weight="0.18072917" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +346,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="响应HttpResponse、JsonResponse、redirect" />
-    <option name="LAST_COMMIT_MESSAGE" value="响应HttpResponse、JsonResponse、redirect" />
+    <MESSAGE value="定义模型类models，并创建数据表" />
+    <option name="LAST_COMMIT_MESSAGE" value="定义模型类models，并创建数据表" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DjangoView$manage.coverage" NAME="manage Coverage Results" MODIFIED="1589896031560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -446,29 +491,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoView/middleware.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoView/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoView/middleware.py" />
     <entry file="file://$USER_HOME$/.virtualenvs/Django/lib/python3.6/site-packages/django/utils/deprecation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
@@ -497,24 +520,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoView/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -525,10 +534,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/booktest/migrations/0002_auto_20200520_0905.py" />
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dd767178-f719-42e7-a07f-21cda2d4fd00/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booktest/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dd767178-f719-42e7-a07f-21cda2d4fd00/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoView/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dd767178-f719-42e7-a07f-21cda2d4fd00/schema/django_demo/table/tb_heros">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="2fbdde4e-22cf-4866-9f0c-06d8f544791c">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booktest/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoView/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#634#666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/Django/lib/python3.6/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="423" lean-forward="true" selection-start-line="423" selection-end-line="423" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/booktest/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booktest/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

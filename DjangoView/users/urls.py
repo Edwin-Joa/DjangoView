@@ -10,6 +10,7 @@ urlpatterns = [
 	path('json_data/',views.JsonDResponse.as_view()),
 	path('redirect_test/',views.RedirectRes.as_view()),
 	path('index/',views.IndexView.as_view(),name='index'),
+
 ]
 
 
