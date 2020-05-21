@@ -3,4 +3,7 @@ from . import views
 
 urlpatterns = [
     path('data/',views.TestModel1.as_view()),
+    path('data_query/',views.TestModel2.as_view()),
+    path('temp/',views.TempView.as_view()),
+    path('books/',views.BooksView.as_view()),
 ]

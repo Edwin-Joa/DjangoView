@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书名</title>
+</head>
+<body>
+    <ul>
+        {% for foo in books %}
+            <li>《{{ foo.btitle }}》</li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>

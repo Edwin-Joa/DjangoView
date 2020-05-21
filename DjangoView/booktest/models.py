@@ -12,6 +12,8 @@ class BookInfo(models.Model):
     class Meta():
         db_table = 'tb_books'
 
+    def __str__(self):
+        return self.btitle
 
 class HeroInfo(models.Model):
     gender = (
@@ -27,3 +29,6 @@ class HeroInfo(models.Model):
 
     class Meta():
         db_table = 'tb_heros'
+
+    def __str__(self):
+        return self.hname
