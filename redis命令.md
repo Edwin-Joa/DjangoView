@@ -2,7 +2,7 @@
 
 ---
 
-
+redis 命令不区分大小写
 
 redis支持的数据结构：redis的数据结构为：key-value
 
