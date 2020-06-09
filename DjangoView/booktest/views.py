@@ -29,10 +29,19 @@ class TestModel1(View):
         # 注意：一般逻辑删除在数据创建时不需要定义
         book.save()
 
+        # 测试create()方法
+        # HeroInfo.objects.create(
+        #     hname='沙悟净',
+        #     hgender=1,
+        #     hcomment='沙和尚',
+        #     hbook_id=5
+        # )
+
+
         # 测试修改数据-------------------------------------------
         # 测试save()方法
-        # hero = HeroInfo.objects.get(hname='猪八戒')
-        # hero.hname = '猪悟能'
+        # hero = HeroInfo.objects.get(hname='猪悟能')
+        # hero.hname = '猪八戒'
         # hero.save()
 
         # 测试update()方法
@@ -165,7 +174,7 @@ class TestModel2(View):
         # print(book)
 
         '''关联查询'''
-
+        
 
         return http.HttpResponse('测试查询')
 
