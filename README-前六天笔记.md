@@ -7,9 +7,16 @@ Make a Django function View and push it.
 
 ## 第一天：
 
+> 查看导包路径：import sys
+>
+> print(sys.path)
+>
+> ip以及端口：ip——点对点：电脑对电脑，prot——端对端：程序对程序；ip+prot能够定位某台主机上的某个程序	
+
   * 新建django项目：
     * 使用虚拟环境：workon Django
     * 在虚拟环境下新建项目：django-admin startproject 项目名
+    * manage.py文件是django工程为了方便开发，提供的一个管理脚本，使用该脚本可以运行一个开发服务器和django框架对接。
   * 配置项目、注册子应用：
     * 进入项目，打开setting.py文件，在该文件中可以更改时区，语言，以及注册子应用
     * 新建子应用users：django-admin startapp users
@@ -60,9 +67,8 @@ urlpatterns = [
         else:
             return http.HttpResponse('post返回的界面')
     ```
-
-   
   
+       
 
  说明：该方法可以实现根据不同的请求方法返回不同的页面，但代码量大，且代码复用性较小；所以通常使用类视图
 
@@ -73,11 +79,94 @@ urlpatterns = [
 * 配置路由：进入子应用的urls.py文件，配置路由：
 
    * 配置好路由之后即可通过get、post两种请求方式请求register页面，但若使用post请求页面，默认会报错，原因是django默认设置了csrf保护机制，在除了get请求之外的其他所有请求，django都会进行验证，所以在测试阶段可先关闭此功能:
+   
  * 了解类视图的响应机制，as_view()：
 
    1. 首先将类视图转化为函数视图
    2. 接受类视图的参数并传递给函数视图
-   3. 分发派遣不同的相应
+   3. 分发派遣不同的响应
+
+* 为类视图添加装饰器
+
+   * 通过路由间接添加装饰器
+
+     > 这种方法最简单快捷，但由于装饰器被放到了路由文件中，不利于代码的可读性，所以一般不采用该方法。
+     >
+     > <font color=red>注意：此方法会为类视图中所有的请求方法都加上装饰行为，因为装饰器装饰行为发生在视图入口处，分发请求前</font>>		
+
+     ```python
+     # 在子路由文件中定义装饰器
+     def my_decorator(func):
+         def wrapper(request,*args,**kwargs):
+             print('路由中的装饰器被调用')
+             return func(request,*args,**kwargs)
+         return wrapper
+     
+     # 在路由列表中装饰视图
+     urlpatterns = [
+         path('usert',my_decorator(views.UserView.as_view())),
+     ]
+     ```
+
+     
+
+   * 在类视图中装饰
+
+     > 在为类视图添加装饰器的过程中，不能直接添加装饰器
+     >
+     > 需要使用<font color=red>method_decorator</font>将其转换为能够适用于类视图的装饰器
+
+     ```python
+     from django.utls.decorators import method_decorator
+     
+     # 定义装饰器
+     def my_decorator(func):
+         def wrapper(request,*args,**kwargs):
+             print('类视图装饰器被调用')
+             return func(request,*args,**kwargs)
+         return wrapper
+     ```
+
+     * 装饰特定方法
+
+       * 在目标方法视图上放进行装饰
+
+         ```python
+         class DemoView(View):
+             
+             @method_decorator(my_decorator)
+             def get(self,request):
+                 return http.HttpResponse('get方法返回的内容')
+             
+             def post(self,request):
+                 return http.HttpResponse('post方法返回的内容')
+             
+         ```
+
+       * 使用name指定装饰特定方法
+
+         ```python
+         @method_decorator(my_decorator,name='post')
+         class DemoView(View):
+             def get(self,request):
+                 return http.HttpResponse('get方法返回的内容')
+             
+             def post(self,request):
+                 return http.HttpResponse('post方法返回的内容')
+             
+         ```
+
+     * 装饰所有方法
+
+       ```python
+       @method_decorator(my_decorator,name='dispatch')
+       class DemoView(View):
+           def get(self,request):
+               return http.HttpResponse('get方法返回的内容')
+           
+           def post(self,request):
+               return http.HttpResponse('post方法返回的内容')
+       ```
 
  * 类视图的拓展类
 
@@ -193,7 +282,7 @@ urlpatterns = [
       'slug': SlugConverter(),      # 匹配字母、数字以及横杠、下划线组成的字符串
       'str': StringConverter(),      # 匹配除了路径分隔符（/）之外的非空字符串，这是默认的形式
       'uuid': UUIDConverter(),   # 匹配格式化的uuid，如 075194d3-6885-417e-a8a8-6c931e272f00
-  }
+  } 
   ```
 
   * 获取内置转换器数据
@@ -266,12 +355,16 @@ urlpatterns = [
 
 * 获取请求头数据
 
-  **主要方法：request.META**
+  **主要方法：request.META,get()**
+
+  **方法二：request.headers.get()**
+
+  > 注意：若用META，get的key需要小写转大写，并且中划线转下划线，自定义的请求头，key会被在前面自动加上HTTP_前缀（WSGI协议规定）；用headers.get()可以直接用key
 
   request.META为字典型数据
 
   ```python
-  # 1.注册子路由
+  # 1.注册子路由 
   # 2. 定义视图
   class HeaderParamView(View):
       def get(self,request):
