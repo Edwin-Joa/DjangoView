@@ -257,5 +257,24 @@ redis支持的数据结构：redis的数据结构为：key-value
 
 4. 使用实例对象对redis数据库进行指定操作
 
-   
+   * string操作
 
+     * 增加
+
+       > conn.set(key,value)
+
+     * 获取
+
+       > conn.get(key)
+
+     * 修改
+
+       > conn.set(key,value)
+
+     * 删除
+
+       > conn.delete(key)
+
+   * 获取key
+
+     > conn.keys()
